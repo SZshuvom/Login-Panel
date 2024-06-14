@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     background: #23242a;
 }
+
 .box {
     position: relative;
     width: 380px;
@@ -19,6 +20,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
 }
+
 .box::before {
     content: '';
     position: absolute;
@@ -93,6 +95,17 @@ body {
     z-index: 2;
     display: flex;
     flex-direction: column;
+}
+.box form .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px; /* Adjust as needed */
+    width: 100%;
+    margin-top: -40px;
+}
+.box form .logo img {
+    width: 80px; 
 }
 .box form h2 {
     color: #fff;
@@ -179,4 +192,4 @@ body {
 }
 .box form input[type="submit"]:active {
     opacity: 0.8;
-}
+}    
