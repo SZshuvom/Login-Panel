@@ -71,6 +71,12 @@ body {
     margin-bottom: 5px;
     width: 100%;
     margin-top: -40px;
+    transition: transform 0.5s; 
+}
+.box form .logo:hover{
+    transform: scale(1.5); 
+    box-shadow: 0 ; 
+
 }
 
 .box form .logo img {
