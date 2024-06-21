@@ -162,6 +162,12 @@ body {
     color: #fff;
 }
 
+.box {
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+}
+
 .box form input[type="submit"] {
     border: none;
     outline: none;
@@ -173,6 +179,13 @@ body {
     font-weight: 600;
     width: 100px;
     margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.box form input[type="submit"]:hover {
+    background: #980b48;
+    color: #45f3ff ;
+    box-shadow: 0 0 10px #980b48, 0 0 20px #45f3ff, 0 0 30px #980b48;
 }
 
 .box form input[type="submit"]:active {
