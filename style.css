@@ -20,10 +20,10 @@ body {
     background: #1c1c1c;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.box::before,
-.box::after {
+.box::before, .box::after {
     content: '';
     position: absolute;
     top: 0;
@@ -32,19 +32,20 @@ body {
     height: 100%;
     z-index: 1;
     transform-origin: center center;
-    animation: animate 6s linear infinite;
+    background: linear-gradient(45deg, #45f3ff, #980b48);
+    animation: rotateBorderColors 8s linear infinite;
 }
 
 .box::before {
-    background: linear-gradient(0deg, transparent, transparent, #980b48, #980b48, #980b48);
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%, 0 0);
 }
 
 .box::after {
-    background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
-    animation-delay: -3s;
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    animation-delay: 2s;
 }
 
-@keyframes animate {
+@keyframes rotateBorderColors {
     0% {
         transform: rotate(0deg);
     }
@@ -71,12 +72,11 @@ body {
     margin-bottom: 5px;
     width: 100%;
     margin-top: -40px;
-    transition: transform 0.5s; 
+    transition: transform 0.5s;
 }
-.box form .logo:hover{
-    transform: scale(1.5); 
-    box-shadow: 0 ; 
 
+.box form .logo:hover {
+    transform: scale(1.5);
 }
 
 .box form .logo img {
@@ -97,6 +97,7 @@ body {
 }
 
 .box form .inputBox input {
+    position: relative;
     width: 100%;
     padding: 20px 10px 10px;
     background: transparent;
@@ -107,6 +108,7 @@ body {
     font-size: 1em;
     letter-spacing: 0.05em;
     transition: 0.5s;
+    z-index: 10;
 }
 
 .box form .inputBox span {
@@ -162,12 +164,6 @@ body {
     color: #fff;
 }
 
-.box {
-    background-color: black;
-    padding: 20px;
-    border-radius: 5px;
-}
-
 .box form input[type="submit"] {
     border: none;
     outline: none;
@@ -184,7 +180,7 @@ body {
 
 .box form input[type="submit"]:hover {
     background: #980b48;
-    color: #45f3ff ;
+    color: #45f3ff;
     box-shadow: 0 0 10px #980b48, 0 0 20px #45f3ff, 0 0 30px #980b48;
 }
 
